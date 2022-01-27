@@ -1,0 +1,387 @@
+{
+  "info": {
+    "_postman_id": "1df14129-bf42-4ae3-85a3-3e8c5b7c0cac",
+    "name": "nebenan_business-v1-import",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "api/business/v1/imports/:registration_source_partner_id.json",
+      "request": {
+        "method": "put",
+        "header": [
+          {
+            "key": "X-AUTH-TOKEN",
+            "value": "{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"business_profile\": {\n    \"title\": \"Example GbR\",\n    \"internal_email\": \"test@example.com\",\n    \"zip_code\": \"10997\",\n    \"city\": \"Berlin\",\n    \"street\": \"Köpenicker Straße\",\n    \"house_number\": \"154\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+          "host": [
+            "{{ApiRoot}}"
+          ],
+          "path": [
+            "api",
+            "business",
+            "v1",
+            "imports",
+            ":registration_source_partner_id.json"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "import works also without opening hours_1.json",
+          "originalRequest": {
+            "method": "put",
+            "header": [
+              {
+                "key": "X-AUTH-TOKEN",
+                "value": "{{AuthToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"business_profile\": {\n    \"title\": \"Example GbR\",\n    \"internal_email\": \"test@example.com\",\n    \"zip_code\": \"10997\",\n    \"city\": \"Berlin\",\n    \"street\": \"Köpenicker Straße\",\n    \"house_number\": \"154\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+              "host": [
+                "{{ApiRoot}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "v1",
+                "imports",
+                ":registration_source_partner_id.json"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "null"
+        },
+        {
+          "name": "creates a new business profile_1.json",
+          "originalRequest": {
+            "method": "put",
+            "header": [
+              {
+                "key": "X-AUTH-TOKEN",
+                "value": "{{AuthToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"business_profile\": {\n    \"title\": \"Example GbR\",\n    \"description\": \"Example trading since 1984\",\n    \"internal_email\": \"email@example.dev\",\n    \"website\": \"https://example.dev\",\n    \"category\": \"health_medical\",\n    \"contact_phone\": \"030-12345678\",\n    \"contact_role\": \"Inhaber\",\n    \"contact_name\": \"Some Person\",\n    \"zip_code\": \"10997\",\n    \"city\": \"Berlin\",\n    \"street\": \"Köpenicker Straße\",\n    \"house_number\": \"154\",\n    \"opt_in_business\": true,\n    \"imprint_freetext\": \"legal!\",\n    \"imprint_url\": \"https://nebenan.de/imprint\",\n    \"opening_hours\": {\n      \"monday\": [\n        [\n          \"09:00\",\n          \"12:00\"\n        ],\n        [\n          \"13:00\",\n          \"18:30\"\n        ]\n      ],\n      \"tuesday\": [],\n      \"wednesday\": [\n        [\n          \"09:00\",\n          \"12:00\"\n        ],\n        [\n          \"13:00\",\n          \"18:30\"\n        ]\n      ],\n      \"thursday\": [\n        [\n          \"09:00\",\n          \"12:00\"\n        ],\n        [\n          \"13:00\",\n          \"18:30\"\n        ]\n      ],\n      \"friday\": [],\n      \"saturday\": [\n        [\n          \"09:00\",\n          \"12:00\"\n        ],\n        [\n          \"13:00\",\n          \"18:30\"\n        ]\n      ],\n      \"sunday\": []\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+              "host": [
+                "{{ApiRoot}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "v1",
+                "imports",
+                ":registration_source_partner_id.json"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "null"
+        },
+        {
+          "name": "updates an imported business profile_2.json",
+          "originalRequest": {
+            "method": "put",
+            "header": [
+              {
+                "key": "X-AUTH-TOKEN",
+                "value": "{{AuthToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"business_profile\": {\n    \"title\": \"Updated Title\",\n    \"internal_email\": \"test@example.com\",\n    \"zip_code\": \"10997\",\n    \"city\": \"Berlin\",\n    \"street\": \"Köpenicker Straße\",\n    \"house_number\": \"154\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+              "host": [
+                "{{ApiRoot}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "v1",
+                "imports",
+                ":registration_source_partner_id.json"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "null"
+        },
+        {
+          "name": "updates an imported business profile_1.json",
+          "originalRequest": {
+            "method": "put",
+            "header": [
+              {
+                "key": "X-AUTH-TOKEN",
+                "value": "{{AuthToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"business_profile\": {\n    \"title\": \"Example GbR\",\n    \"internal_email\": \"test@example.com\",\n    \"zip_code\": \"10997\",\n    \"city\": \"Berlin\",\n    \"street\": \"Köpenicker Straße\",\n    \"house_number\": \"154\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+              "host": [
+                "{{ApiRoot}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "v1",
+                "imports",
+                ":registration_source_partner_id.json"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "null"
+        },
+        {
+          "name": "import connects biz to a chain_1.json",
+          "originalRequest": {
+            "method": "put",
+            "header": [
+              {
+                "key": "X-AUTH-TOKEN",
+                "value": "{{AuthToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"business_profile\": {\n    \"title\": \"Example GbR\",\n    \"internal_email\": \"test@example.com\",\n    \"zip_code\": \"10997\",\n    \"city\": \"Berlin\",\n    \"street\": \"Köpenicker Straße\",\n    \"house_number\": \"154\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+              "host": [
+                "{{ApiRoot}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "v1",
+                "imports",
+                ":registration_source_partner_id.json"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "null"
+        },
+        {
+          "name": "does not create a new business profile with wrong auth token_1.json",
+          "originalRequest": {
+            "method": "put",
+            "header": [
+              {
+                "key": "X-AUTH-TOKEN",
+                "value": "{{AuthToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"business_profile\": {\n    \"title\": \"Example GbR\",\n    \"description\": \"Example trading since 1984\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+              "host": [
+                "{{ApiRoot}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "v1",
+                "imports",
+                ":registration_source_partner_id.json"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "{\n  \"error\": \"Not authorized\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "api/business/v1/imports/:registration_source_partner_id.json",
+      "request": {
+        "method": "delete",
+        "header": [
+          {
+            "key": "X-AUTH-TOKEN",
+            "value": "{{AuthToken}}",
+            "type": "text"
+          }
+        ],
+        "body": null,
+        "url": {
+          "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+          "host": [
+            "{{ApiRoot}}"
+          ],
+          "path": [
+            "api",
+            "business",
+            "v1",
+            "imports",
+            ":registration_source_partner_id.json"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "responds with 404 when trying to delete a non existing imported business profile_1.json",
+          "originalRequest": {
+            "method": "delete",
+            "header": [
+              {
+                "key": "X-AUTH-TOKEN",
+                "value": "{{AuthToken}}",
+                "type": "text"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+              "host": [
+                "{{ApiRoot}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "v1",
+                "imports",
+                ":registration_source_partner_id.json"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "{\n  \"error\": \"Business profile not previously imported\"\n}"
+        },
+        {
+          "name": "deletes an imported business profile_1.json",
+          "originalRequest": {
+            "method": "delete",
+            "header": [
+              {
+                "key": "X-AUTH-TOKEN",
+                "value": "{{AuthToken}}",
+                "type": "text"
+              }
+            ],
+            "body": null,
+            "url": {
+              "raw": "{{ApiRoot}}/api/business/v1/imports/:registration_source_partner_id.json",
+              "host": [
+                "{{ApiRoot}}"
+              ],
+              "path": [
+                "api",
+                "business",
+                "v1",
+                "imports",
+                ":registration_source_partner_id.json"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "\"\""
+        }
+      ]
+    }
+  ]
+}
