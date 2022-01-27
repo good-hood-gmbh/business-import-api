@@ -7,7 +7,7 @@
 
 
 ## Introduction
-This API can be used by registered business partner to create business profile on a [gewerbe.nebenan.de/](https://gewerbe.nebenan.de) platform.
+This API can be used by registered business partner to create business profile on a [gewerbe.nebenan.de](https://gewerbe.nebenan.de) platform.
 
 Please see attached postman collection for examples.
 
@@ -38,8 +38,8 @@ x-auth-token: acme_corp:d4322b2879dae36af385e20908c2b50c
 ## API usage
 Base URLs are:
 
-- **LIVE**: `https://api-nebenan.de/`
-- **STAGE**: `https://lisa-api.nebenan.de/` 
+- **LIVE**: `https://api-nebenan.de`
+- **STAGE**: `https://lisa-api.nebenan.de` 
 
 **Headers**
 
@@ -139,7 +139,7 @@ Body parameters:
 | `city` | String | + |City name | `Berlin` |
 | `street` | String | + |Street | `Köpenicker Straße` |
 | `house_number` | String | + |House number| `154` |
-| `imprint_freetext` | String | - |Legal information in freetxt format |  `legal!` |
+| `imprint_freetext` | String | - |Legal information in freetext format |  `legal!` |
 | `imprint_url` | String | - |Link to the legal information | `https://nebenan.de/imprint` |
 | `opening_hours` | Object |  - |JSON object containing opening hours for every weekday | see example below |
 
