@@ -9,6 +9,8 @@
 ## Introduction
 This API can be used by registered business partner to create business profile on a [gewerbe.nebenan.de/](https://gewerbe.nebenan.de) platform.
 
+Please see attached postman collection for examples.
+
 ### Audience
 This document designed for technical staff. This document includes different technical terms, and requires an understanding of these by the reading person.
 
