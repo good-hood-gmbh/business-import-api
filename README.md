@@ -7,6 +7,7 @@
 
 
 ## Introduction
+That repo is a documentation only. Here described how nebenan.de business import API could be used.
 This API can be used by registered business partner to create business profile on a [gewerbe.nebenan.de](https://gewerbe.nebenan.de) platform.
 
 Please see attached postman collection for examples.
@@ -47,8 +48,13 @@ Base URLs are:
 content-type: application-json
 ```
 
+### General info
+
+Every request described below does not immediately creates/updates/deletes a profile. 
+Every request adds a job into the queue and all queue elements processed asynchronously every 15 minutes. That basically means, that business profile will be ac tually created, updated or deleted through 15 minutes max.
 
 ### Import a business profile
+Creates a new business profile according to body given.
 
 ```
 PUT /api/business/v1/imports/:partner_external_id.json
@@ -199,6 +205,8 @@ BODY: null
 ```
 
 ### Update business profile
+Updates imported business profile.
+
 ```
 PUT /api/business/v1/imports/:partner_external_id.json
 {
@@ -226,6 +234,7 @@ null
 ```
 
 ### Delete imported business profile
+Deletes previously imported business profile.
 
 ```
 DELETE /api/business/v1/imports/:partner_external_id.json
