@@ -3,7 +3,7 @@
 
 | Version      | Date | Description |
 | --- | --- | --- |
-| 0.1 | 2022/01/27 | Inital creation
+| 0.1 | 2022/01/27 | Initial creation
 
 
 ## Introduction
